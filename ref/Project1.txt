@@ -1,0 +1,41 @@
+Reference - TCPxBB
+
+- PDGF - generate 1 GB data - DONE
+	https://www.bankmark.de/products-and-services/pdgf/quick-start/
+	java -jar pdgf.jar -l bigbench-schema.xml -l bigbench-generation.xml -c -ns -sf 1 -s
+
+- Take 2-3 tables and implement 2-3 queries related to customers - 
+	Tables needed - 
+		customer
+		store_sales
+		web_sales
+		date_dim
+
+- ETL Scenarios
+	- Data cleaning and reject handling
+	- Data transformations
+	- SCD Type1 & Type2
+	- Transactions table load
+
+- Optimizations
+	- Bucketing & Partitioning
+	- AQE - skew partition
+	- Dynamic Partition Pruning
+	- Dynamic Resource Allocation
+
+	
+- Business scenarios  - 
+	- Find monthly total sales amount for each customer in web as well as store sales  
+	- Display customers with both store and web sales in consecutive years for whom the increase in web sales 
+	  exceeds the increase in store sales for a specified year.
+
+
+- Follow everything from Udemy Azure Databricks course 
+ 
+ 
+ docker pull cloudera/quickstart:latest
+
+docker run -m=8g --hostname=quickstart.cloudera --privileged=true -t -i -v /temp:/src --publish-all=true -p 8888 cloudera/quickstart /usr/bin/docker-quickstart
+
+
+/Users/Shashank/Desktop/temp
